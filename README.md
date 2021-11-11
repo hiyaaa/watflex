@@ -9,5 +9,5 @@ npm run [loc,dev,stg,prd]
 ```
 pm2 start pm2.config.js -- --mode [dev,stg,prd]
 ```
-
+test
 .
