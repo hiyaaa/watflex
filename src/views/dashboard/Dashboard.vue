@@ -14,7 +14,7 @@
     </v-row>
   </v-container>
 </template>
-
+ 
 <script>
 import { sync } from "vuex-pathify";
 import timeUtil from "@/utils/timeUtil";
