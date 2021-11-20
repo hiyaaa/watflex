@@ -24,7 +24,10 @@ export default [
   //     },
   //   ]
   // },
-  
+  {
+    title: "Board",
+    to: "/board"
+  },
   {
     title:"Setting",
     to:"/setting"

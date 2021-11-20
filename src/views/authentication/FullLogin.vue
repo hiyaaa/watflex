@@ -153,7 +153,7 @@ export default {
     async submit() {
       this.$refs.form.validate();
       const res = apiHelper.getMock("login");
-
+      console.log("login")
       if (this.id == "admin" && this.password == "admin") {
         this.account = res;
         window.localStorage.setItem("account", res);

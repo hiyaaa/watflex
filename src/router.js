@@ -34,12 +34,11 @@ const router = new Router({
           component: () => import("@/views/dashboard/Dashboard")
           // component: () => import("@/views/dashboard/Dashboard_before")
         },
-        // {
-        //   name: "EVENT",
-        //   path: "event",
-        //   component: () => import("@/views/alarmEvent/EventList"),
-        //   meta: { parent: "HOME" }
-        // },
+        {
+          name: "BOARD",
+          path: "/board",
+          component: () => import("@/views/board/Board"),
+        },
         // {
         //   name: "AP_DETAIL",
         //   path: "ap/ap/:mac",
