@@ -3,9 +3,19 @@
     <v-row>
       <v-col>
         <v-card class="pa-5">
-          <v-row>
+          <v-row class="mb-3">
             <v-col style="padding-top:0px">
-              <ApCurrentStatus :zone="zone"></ApCurrentStatus>
+              <DailyBoxOffice></DailyBoxOffice>
+            </v-col>
+          </v-row>
+          <v-row class="mb-3">
+            <v-col style="padding-top:0px">
+              <WeeklyBoxoffice></WeeklyBoxoffice>
+            </v-col>
+          </v-row>
+          <v-row class="mb-3">
+            <v-col style="padding-top:0px">
+              <WeekendBoxoffice></WeekendBoxoffice>
             </v-col>
           </v-row>
          
@@ -64,7 +74,9 @@ export default {
     }
   },
   components: {
-    ApCurrentStatus: () => import("@/components/dashboard/ApCurrentStatus"),
+    DailyBoxOffice: () => import("@/components/dashboard/DailyBoxOffice"),
+    WeeklyBoxoffice: () => import("@/components/dashboard/WeeklyBoxoffice"),
+    WeekendBoxoffice: () => import("@/components/dashboard/WeekendBoxoffice"),
   }
 };
 </script>

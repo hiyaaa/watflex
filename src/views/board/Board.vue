@@ -5,7 +5,7 @@
         <v-card class="pa-5">
           <v-row>
             <v-col style="padding-top:0px">
-              <ApCurrentStatus :zone="zone"></ApCurrentStatus>
+              개발중.
             </v-col>
           </v-row>
          
@@ -64,7 +64,7 @@ export default {
     }
   },
   components: {
-    ApCurrentStatus: () => import("@/components/dashboard/ApCurrentStatus"),
+    
   }
 };
 </script>
