@@ -5,7 +5,7 @@ const state = {
   Customizer_drawer: false,
   SidebarColor: "#1d2228", //Change Sidebar Color || 'white', | "#2b2b2b" | "rgb(44, 59, 164)" | "rgb(96, 44, 164)" | "rgb(151, 210, 219)" | "rgb(77, 86, 100)"
   SidebarBg: "",
-  navbarColor: "#448AFF",
+  navbarColor: "#424242",
   locale: "ko",
   refreshCount: 180, // 화면을 새로고침할 시간간격 저장, 음수이면 카운트를 멈춤
   dashboardRefresh: 0, // 대시보드를 새로고침할 때 여기에 DT를 넣음

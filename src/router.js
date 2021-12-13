@@ -35,9 +35,9 @@ const router = new Router({
           // component: () => import("@/views/dashboard/Dashboard_before")
         },
         {
-          name: "BOARD",
-          path: "/board",
-          component: () => import("@/views/board/Board"),
+          name: "SEARCH",
+          path: "/search",
+          component: () => import("@/views/search/Search"),
         },
         // {
         //   name: "AP_DETAIL",

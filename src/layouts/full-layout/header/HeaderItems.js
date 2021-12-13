@@ -1,6 +1,6 @@
 export default [
   {
-    title:"Dash Board",
+    title:"홈",
     to:"/dashboard"
   },
   // {
@@ -25,11 +25,7 @@ export default [
   //   ]
   // },
   {
-    title: "Board",
-    to: "/board"
+    title: "검색",
+    to: "/search"
   },
-  {
-    title:"Setting",
-    to:"/setting"
-  }
 ];

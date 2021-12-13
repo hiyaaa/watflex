@@ -16,6 +16,7 @@ const theme = {
 
 export default new Vuetify({
     theme: {
+      dark: true,
         themes: {
           dark: theme,
           light: theme,

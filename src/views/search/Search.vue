@@ -5,7 +5,7 @@
         <v-card class="pa-5">
           <v-row>
             <v-col style="padding-top:0px">
-              개발중.
+              <SearchPage></SearchPage>
             </v-col>
           </v-row>
          
@@ -20,7 +20,7 @@ import { sync } from "vuex-pathify";
 import timeUtil from "@/utils/timeUtil";
 import { get } from "vuex-pathify";
 export default {
-  name: "Dashboard",
+  name: "Search",
 
   data: () => {
     return {
@@ -64,7 +64,7 @@ export default {
     }
   },
   components: {
-    
+    SearchPage: () => import("@/components/search/SearchPage"),
   }
 };
 </script>

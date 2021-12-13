@@ -1,8 +1,7 @@
 <template>
-  <v-app-bar dense clipped-left clipped-right :color="navbarColor" dark max-height="48px">
+  <v-app-bar dense clipped-left clipped-right dark max-height="48px">
     <!---Logo part -->
-    <div style="width: 200px; cursor: pointer" @click="goHome">
-      <img src="@/assets/images/watflex_logo.png" width="33" class="mr-2" style="display: inline; vertical-align: top" />
+    <div style="width: 150px; cursor: pointer; text-align: center;" @click="goHome">
       <h2 style="display: inline">WATFLEX</h2>
     </div>
     <v-divider inset vertical style="border: 1px #ffffff55 solid; margin-right: 30px"></v-divider>
@@ -200,21 +199,6 @@ export default {
     this.refreshDashboard();
     this.randomValues = [];
     this.setRandomdata = [];
-    this.apiHelper.get(this.apiUrl.SSE.GET_CLIENTID, {}).then(res => {
-      window.sessionStorage.setItem("client_id", res.client_id);
-      // window.sessionStorage.setItem("domain_id", this.account.domain);
-      this.$sse(this.apiUrl.SSE.SSE_START + res.client_id + "/" + this.account.domain, {
-        //TODO:: domin sse로 전송하지 않고 server단에서 호출하는 방법 확인하기
-        formet: "json"
-      }).then(sse => {
-        this.sse = sse;
-        sse.subscribe("globalNotification", result => {
-          const res = JSON.parse(result).result;
-          this.newAlarms = this.compareNew(this.newAlarms, res.alarms);
-          this.newEvents = this.compareNew(this.newEvents, res.events);
-        });
-      });
-    });
     this.nowTime = this.timeUtil.getNowTime("YYYY-MM-DD HH:mm:SS");
     setInterval(() => {
       this.nowTime = this.timeUtil.getNowTime("YYYY-MM-DD hh:mm:ss");

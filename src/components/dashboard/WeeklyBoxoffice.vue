@@ -2,15 +2,20 @@
   <div>
     <span style="position: absolute; right: 20px"> </span>
     <base-title title="주간 박스오피스"></base-title>
-    <v-row style="float: left; width: 100%" no-gutters class="mt-3">
+    <v-row style="width: 100%" no-gutters class="mt-3">
       <v-col>
         <v-sheet class="mx-auto" elevation="8">
           <v-slide-group
             v-model="model"
             class="pa-4"
-            active-class="success"
             show-arrows
           >
+          <template v-slot:next>
+            <p>{{right}}</p>
+          </template>
+              <template v-slot:prev>
+            <p>{{left}}</p>
+          </template>
             <v-slide-item v-for="n in 15" :key="n" v-slot="{ active, toggle }">
               <v-card
                 :color="active ? undefined : 'grey lighten-1'"
@@ -46,6 +51,8 @@ export default {
   data: () => {
     return {
       model: null,
+      left: '<',
+      right: '>',
       cardHeight: 200,
       apConnStatusValues: [],
       apRadioTypeValues: [],
@@ -97,3 +104,6 @@ export default {
   components: {},
 };
 </script>
+<style scoped>
+
+</style>
